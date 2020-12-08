@@ -1,0 +1,8 @@
+import csv
+import plotly.express as px
+import pandas as pd
+
+with open('cups of coffee vs hours of sleep.csv', newline='') as f:
+    df = csv.DictReader(f)
+    fig = px.scatter(df, x='Coffee in ml', y='sleep in hours')
+    fig.show()
